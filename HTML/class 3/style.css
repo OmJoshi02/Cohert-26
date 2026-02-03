@@ -1,0 +1,54 @@
+body{
+    background-color: #111;
+    color: white;
+}
+
+#parent {
+    border: 2px solid red;
+    width: 80vw;
+    height: 350px;
+}
+.child{
+    border: 2px solid yellow;
+    height: 40px;
+    width: 40px;
+}
+
+#parent {
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+
+    /* justify-content: start; */
+    /* justify-content: end; */
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; always works on main axis */
+
+    /* align-items: end; */
+    /* align-items: start; */
+    /* align-items: center; */
+    
+    gap: 2px;
+}
+
+.child-1 {
+    flex: 2;
+    order: 2;
+}
+.child-2 {
+    flex:1; /*give required space to others and remaining space to child-1*/
+    /* align-self: flex-end; */
+    order: 1;
+}
+.child-3 {
+    flex: 2;
+    order: 4;
+}
+.child-4 {
+    flex: 2;
+    order: 3;
+}
