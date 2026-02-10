@@ -1,0 +1,180 @@
+body{
+  background-color: #111;
+  color: white;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+  margin: auto;
+  margin-top: -10px;
+}
+
+#title{
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#contact{
+  background-color: transparent;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  border-color: transparent;
+  margin-right: 10px;
+}
+
+#free{
+  background-color: white;
+  padding: 7px 14px;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  font-size: 15px;
+  border-color: transparent;
+  margin-right: 10px;
+}
+
+.hero{
+  min-height: calc(100vh - 80px);
+}
+
+.container{
+  max-width: 1200px;   /* similar to Mintlify */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.shifter{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px; /* 👈 perfect spacing */
+}
+
+
+
+.autopilot_button{
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+
+  padding: 4px 12px;   /* 👈 thinner */
+}
+
+
+#autopilot{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+#autopilot p{
+  margin: 0;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+}
+
+
+span{
+  background-color: rgb(34, 255, 120);
+  padding: 2px 6px;
+  font-size: 11px;
+  border-radius: 999px;
+  margin-right: 8px;
+}
+
+#heading{
+  margin-top: 100px;
+  margin-left: 750px;
+
+}
+#first{
+  margin-top: -45px;
+  font-size: 65px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+#bottom{
+  margin-top: -30px;
+  font-size: 65px;
+  margin-left: 670px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.desc{
+  margin-top: -20px;
+  margin-left: 760px;
+  font-size: 22px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.email-pill{
+  display: flex;
+  align-items: center;
+
+  width: 360px;
+  padding: 4px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+
+  margin: 30px auto 0;
+}
+
+/* Input */
+.email-pill input{
+  flex: 1;
+  background: transparent;
+  border: none;
+
+  padding: 10px 14px;
+  color: white;
+  font-size: 14px;
+
+  outline: none;
+}
+
+/* Placeholder */
+.email-pill input::placeholder{
+  color: rgba(255,255,255,0.6);
+}
+
+/* Button */
+.email-pill button{
+  padding: 8px 16px;
+
+  background: white;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin: auto;
+}
