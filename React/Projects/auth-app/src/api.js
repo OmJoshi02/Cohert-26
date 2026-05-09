@@ -1,37 +1,48 @@
-const BASE_URL = "/api/v1/users";
+export const registerUser = async (userData) => {
 
-export async function registerUser(data) {
-  const res = await fetch(`${BASE_URL}/register`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
+  const users =
+    JSON.parse(localStorage.getItem("users")) || [];
 
-  return res.json();
-}
+  users.push(userData);
 
-export async function loginUser(data) {
-  const res = await fetch(`${BASE_URL}/login`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    credentials: "include", // 🔥 important
-    body: JSON.stringify(data),
-  });
+  localStorage.setItem(
+    "users",
+    JSON.stringify(users)
+  );
 
-  return res.json();
-}
+  return {
+    success: true,
+    message: "User registered successfully",
+  };
+};
 
-export async function getCurrentUser() {
-  const res = await fetch(`${BASE_URL}/current-user`, {
-    credentials: "include",
-  });
 
-  return res.json();
-}
+export const loginUser = async ({ email, password }) => {
 
-export async function logoutUser() {
-  await fetch(`${BASE_URL}/logout`, {
-    method: "POST",
-    credentials: "include",
-  });
-}
+  const users =
+    JSON.parse(localStorage.getItem("users")) || [];
+
+  const user = users.find(
+    (u) =>
+      u.email === email &&
+      u.password === password
+  );
+
+  if (!user) {
+    return {
+      success: false,
+      message: "Invalid credentials",
+    };
+  }
+
+  localStorage.setItem(
+    "loggedInUser",
+    JSON.stringify(user)
+  );
+
+  return {
+    success: true,
+    message: "Login successful",
+    user,
+  };
+};
