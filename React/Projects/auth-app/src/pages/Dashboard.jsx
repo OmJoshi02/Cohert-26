@@ -3,30 +3,42 @@ import { getCurrentUser, logoutUser } from "../api";
 import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
+
   const [user, setUser] = useState(null);
+
   const navigate = useNavigate();
 
   useEffect(() => {
+
     async function fetchUser() {
+
       const data = await getCurrentUser();
 
       if (!data.success) {
+
         navigate("/");
+
       } else {
-        setUser(data.data);
+
+        setUser(data.user);
+
       }
     }
 
     fetchUser();
+
   }, []);
 
   const handleLogout = async () => {
+
     await logoutUser();
+
     navigate("/");
   };
 
   return (
     <div>
+
       <h2>Dashboard</h2>
 
       {user ? (
@@ -37,7 +49,10 @@ export default function Dashboard() {
         <p>Loading...</p>
       )}
 
-      <button onClick={handleLogout}>Logout</button>
+      <button onClick={handleLogout}>
+        Logout
+      </button>
+
     </div>
   );
 }
